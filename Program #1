@@ -1,0 +1,18 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string name;
+    int birthYear, currentYear = 2025;
+
+    cout << "Name: ";
+    cin >> name;
+    cout << "Birth Year: ";
+    cin >> birthYear;
+
+    cout << "Your Name is: " << name << endl;
+    cout << "Your Age is: " << (currentYear - birthYear);
+
+    return 0;
+}
