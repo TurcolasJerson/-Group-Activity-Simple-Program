@@ -1,0 +1,84 @@
+‎1.
+‎
+‎#include <iostream>
+‎
+‎int main() {
+‎    for (int i = 10; i >= 0; i--) {
+‎        std::cout << i << "\n";
+‎    }
+‎    return 0;
+‎}
+‎
+‎
+‎
+‎2.
+‎
+‎#include <iostream>
+‎using namespace std;
+‎
+‎int main() {
+‎    for (int i = 10; i >= 0; i -= 2) {
+‎        cout << i << "\n";
+‎    }
+‎    return 0;
+‎}
+‎
+‎
+‎
+‎3.
+‎
+‎#include <iostream>
+‎using namespace std;
+‎
+‎int main() {
+‎    int sum = 0;
+‎    
+‎    for (int i = 5; i <= 50; i += 3) {
+‎        sum += i;
+‎    }
+‎
+‎    cout << "Sum of the series: " << sum << endl;
+‎    return 0;
+‎}
+‎
+‎
+‎
+‎4.
+‎
+‎#include <iostream>
+‎using namespace std;
+‎
+‎int main() {
+‎    char ch;
+‎
+‎    for (int i = 0; i < 5; i++) {
+‎        cout << "Enter a character: ";
+‎        cin >> ch;
+‎
+‎        if (ch == 'n' || ch == 'N') { // Checking both lowercase and uppercase 'N'
+‎            cout << "Exiting loop..." << endl;
+‎            break; 
+‎        }
+‎    }
+‎
+‎    return 0;
+‎}
+‎
+‎
+‎
+‎5.
+‎
+‎#include <iostream>
+‎using namespace std;
+‎
+‎int main() {
+‎    for (int i = 0; i <= 5; i++) {
+‎        cout << "Multiplication Table of " << i << ":\n";
+‎        for (int j = 1; j <= 10; j++) {
+‎            cout << i << " x " << j << " = " << (i * j) << endl;
+‎        }
+‎        cout << endl; // Adds space between tables
+‎    }
+‎
+‎    return 0;
+‎}
