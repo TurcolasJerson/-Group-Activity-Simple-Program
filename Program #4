@@ -1,0 +1,142 @@
+‎1.)
+‎
+‎#include <iostream>
+‎#include <string>
+‎using namespace std;
+‎
+‎int main() {
+‎    string name;
+‎    int birthYear, birthMonth, birthDay;
+‎    int currentYear = 2025, currentMonth = 2, currentDay = 26;
+‎
+‎    cout << "Enter your name: ";
+‎    getline(cin, name); 
+‎
+‎    cout << "Enter your birth year: ";
+‎    cin >> birthYear;
+‎    cout << "Enter your birth month (1-12): ";
+‎    cin >> birthMonth;
+‎    cout << "Enter your birth day (1-31): ";
+‎    cin >> birthDay;
+‎
+‎    int age = currentYear - birthYear - (birthMonth > currentMonth || (birthMonth == currentMonth && birthDay > currentDay));
+‎
+‎    cout << "\nYour Name: " << name << endl;
+‎    cout << "Your Age: " << age << " years old" << endl;
+‎
+‎    return 0;
+‎}
+‎
+‎
+‎
+‎2.)
+‎
+‎#include <iostream>
+‎using namespace std;
+‎
+‎int main() {
+‎    int year;
+‎    cout << "Enter a year: ";
+‎    cin >> year;
+‎
+‎    if ((year % 4 == 0 && (year % 100 != 0 || year % 400 == 0))) {
+‎        cout << year << " is a leap year." << endl;
+‎    } else {
+‎        cout << year << " is not a leap year." << endl;
+‎    }
+‎
+‎    return 0;
+‎}
+‎
+‎
+‎
+‎3.)
+‎
+‎#include <iostream>
+‎using namespace std;
+‎
+‎int main() {
+‎    int num1, num2, num3;
+‎
+‎    cout << "Enter three numbers: ";
+‎    cin >> num1 >> num2 >> num3;
+‎
+‎    if (num1 >= num2 && num1 >= num3) {
+‎        cout << "The largest number is: " << num1 << endl;
+‎    } else if (num2 >= num1 && num2 >= num3) {
+‎        cout << "The largest number is: " << num2 << endl;
+‎    } else {
+‎        cout << "The largest number is: " << num3 << endl;
+‎    }
+‎
+‎    return 0;
+‎}
+‎
+‎
+‎
+‎4.)
+‎
+‎#include <iostream>
+‎using namespace std;
+‎
+‎int main() {
+‎    double num1, num2;
+‎    char turkz;
+‎
+‎    cout << "Enter two numbers: ";
+‎    cin >> num1 >> num2;
+‎
+‎    cout << "Enter an operator (+, -, *, /): ";
+‎    cin >> turkz;
+‎
+‎    if (turkz == '+') {
+‎        cout << "Result: " << num1 + num2 << endl;
+‎    }
+‎    else if (turkz == '-') {
+‎        cout << "Result: " << num1 - num2 << endl;
+‎    }
+‎    else if (turkz == '*') {
+‎        cout << "Result: " << num1 * num2 << endl;
+‎    }
+‎    else if (turkz == '/') {
+‎        if (num2 != 0) {
+‎            cout << "Result: " << num1 / num2 << endl;
+‎        } else {
+‎            cout << "Error: Division by zero." << endl;
+‎        }
+‎    }
+‎    else {
+‎        cout << "Invalid operator." << endl;
+‎    }
+‎
+‎    return 0;
+‎}
+‎
+‎
+‎
+‎5.)
+‎
+‎#include <iostream>
+‎using namespace std;
+‎
+‎int main() {
+‎    double grade, total = 0;
+‎    int numGrades = 4;
+‎
+‎    for (int i = 1; i <= numGrades; i++) {
+‎        cout << "Enter grade for quarter " << i << ": ";
+‎        cin >> grade;
+‎
+‎        while (grade < 0 || grade > 100) {
+‎            cout << "Invalid input. Please enter a grade between 0 and 100: ";
+‎            cin >> grade;
+‎        }
+‎
+‎        total += grade;
+‎    }
+‎
+‎    double average = total / numGrades;
+‎    cout << "The average grade is: " << average << endl;
+‎
+‎    return 0;
+‎}
