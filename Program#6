@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num, originalNum, sum = 0, digit;
+
+    cout << "Enter a positive number: ";
+    cin >> num;
+    originalNum = num;
+
+    while (num > 0) {
+        digit = num % 10;
+        sum += digit;
+        num /= 10;
+    }
+
+    cout << "The sum of the digits is: " << sum << "\n\n";
+
+    int divisor = 2;
+    do {
+        if (originalNum % divisor == 0) {
+            cout << originalNum << " is divisible by " << divisor << endl;
+        } else {
+            cout << originalNum << " is not divisible by " << divisor << endl;
+        }
+        divisor++;
+    } while (divisor <= 9);
+
+    return 0;
+}
